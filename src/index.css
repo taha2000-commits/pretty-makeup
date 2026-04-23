@@ -1,1 +1,129 @@
 @import "tailwindcss";
+
+@theme {
+  --shadow-3xl: 0 25px 30px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+  --default-font-family: "Roboto", sans-serif;
+  --font-sekuya: "Sekuya", serif;
+  --font-sirin: "Sirin Stencil", sans-serif;
+  --font-playwright: "Playwrite CU", cursive;
+  --text-md: 16px;
+  --animate-marquee: marquee 12s linear infinite;
+  --animate-slideUp: slideUp 0.7s ease-out;
+  --animate-slideDown: slideDown 0.7s ease-out;
+  --text-xxs: 10px;
+  --breakpoint-xs: 390px;
+  --spacing-50vh: 50vh;
+  --spacing-60vh: 60vh;
+  --spacing-70vh: 70vh;
+  --spacing-80vh: 80vh;
+  --spacing-90vh: 90vh;
+  --spacing-110vh: 110vh;
+  --spacing-120vh: 120vh;
+}
+
+@font-face {
+  font-family: "Sekuya";
+  src: url("./assets/fonts/Sekuya-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sirin Stencil";
+  src: url("./assets/fonts/SirinStencil-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playwrite CU";
+  src: url("./assets/fonts/PlaywriteCU-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+
+  @media (width <40rem) {
+    max-width: 100%;
+  }
+
+  @media (width >=40rem) {
+    max-width: 100%;
+  }
+
+  @media (width >=40rem) {
+    max-width: 100%;
+  }
+
+  @media (width >=48rem) {
+    max-width: 90%;
+  }
+
+  @media (width >=64rem) {
+    max-width: 80%;
+  }
+
+  @media (width >=80rem) {
+    max-width: 80%;
+  }
+
+  @media (width >=96rem) {
+    max-width: 70%;
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply h-0.5 w-0.5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-rose-400;
+}
+
+.scrollbar-4::-webkit-scrollbar {
+  @apply h-1 w-1;
+}
+
+.scrollbar-4::-webkit-scrollbar-thumb {
+  @apply bg-rose-400;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  @apply h-0 w-0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.text-fill-transparent {
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
