@@ -22,8 +22,5 @@ export const useAddToCart = () => {
         queryKey: ["user_stats"],
       });
     },
-    onError: (error) => {
-      toast.error(error.message);
-    },
   });
 };
