@@ -15,14 +15,7 @@ const Account = () => {
       <h3 className="text-4xl font-thin capitalize">Account</h3>
       <div className="grid grid-cols-12 gap-5">
         <div className="col-span-4 sm:col-span-3">
-          <div className="aspect-square w-full overflow-hidden rounded-full border-4 border-white bg-gray-400 shadow-2xl">
-            <img
-              loading="lazy"
-              src="/profile.jpeg"
-              alt=""
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <div className="aspect-square w-full overflow-hidden rounded-full border-4 border-white bg-gray-200 shadow-2xl "></div>
         </div>
         <div className="col-span-8 flex flex-col justify-center gap-1 sm:col-span-9">
           <h5 className="text-2xl">{user?.user_metadata.username}</h5>
