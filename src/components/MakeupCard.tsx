@@ -82,7 +82,10 @@ const MakeupCard = ({
         <h5
           className="relative cursor-pointer truncate text-lg font-medium capitalize hover:underline"
           onClick={() => {
-            navigate(`/product/${product.id}`, { state: product });
+            navigate(`/product/${product.id}`, {
+              state: product,
+              preventScrollReset: false,
+            });
           }}
         >
           {product.name}

@@ -17,12 +17,13 @@ const LoginPage = () => {
     handleSubmit,
     formState: {
       errors: { email: emailError, password: passwordError },
+      defaultValues,
     },
   } = useForm<LoginInputs>({
     mode: "onChange",
     defaultValues: {
-      email: "",
-      password: "",
+      email: "elawamytaha@gmail.com",
+      password: "Tt@123456",
     },
   });
 
@@ -58,6 +59,7 @@ const LoginPage = () => {
           register={register}
           registerOptions={emailRegisterOptions}
           type="email"
+          defaultValue={defaultValues?.["email"]}
         />
         <CustomField
           label={"password"}
@@ -66,6 +68,7 @@ const LoginPage = () => {
           name={"password"}
           register={register}
           registerOptions={passwordRegisterOptions}
+          defaultValue={defaultValues?.["password"]}
         />
         <div className="flex justify-end">
           <Link
